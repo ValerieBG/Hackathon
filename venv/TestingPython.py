@@ -1,1 +1,12 @@
-print("hello i am your therapyst how are u feeling today?")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "hello i am your therapyst how are u feeling today?"
+
+if __name__ == "__main__":
+    app.run()
+
+
