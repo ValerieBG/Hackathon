@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3898ce-677a-4e84-8f57-8670ef6398ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Thera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/TestingPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/TestingPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/MessingWithToneThing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/TestingPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/BasicWebsite.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -61,7 +63,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TestingPython">
+  <component name="RunManager" selected="Python.MessingWithToneThing">
+    <configuration name="MessingWithPython" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Hackathon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/MessingWithPython.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="MessingWithToneThing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Hackathon" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,7 +97,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/MessingWithToneThing.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sherry\Documents\Hackathon\venv\Thera.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -95,7 +118,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/TestingPython.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sherry\Documents\Hackathon\venv\BasicWebsite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,9 +150,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MessingWithToneThing" />
+        <item itemvalue="Python.MessingWithPython" />
         <item itemvalue="Python.TestingPython" />
         <item itemvalue="Python.VeryBasicBot" />
-        <item itemvalue="Python.MessingWithToneThing" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587087047565</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="copied html for chatbot formatting">
+      <created>1587161657644</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587161657644</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -229,6 +260,7 @@
     <MESSAGE value="python works!" />
     <MESSAGE value="(very) basic website" />
     <MESSAGE value="sample tone analyzer code works + added very basic bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="sample tone analyzer code works + added very basic bot" />
+    <MESSAGE value="copied html for chatbot formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="copied html for chatbot formatting" />
   </component>
 </project>
