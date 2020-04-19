@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/BasicWebsite.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/BasicWebsite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Thera.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Thera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/VeryBasicBot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587256215927</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added comments and new responses.">
+      <created>1587262650639</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587262650639</updated>
+    </task>
+    <task id="LOCAL-00012" summary="deleted test files">
+      <created>1587262756949</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587262756949</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -299,6 +311,8 @@
     <MESSAGE value="copied html for chatbot formatting" />
     <MESSAGE value="text based chatbot works with watson tones&#10;still need to add better responses" />
     <MESSAGE value="added tone analyzer class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tone analyzer class" />
+    <MESSAGE value="Added comments and new responses." />
+    <MESSAGE value="deleted test files" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted test files" />
   </component>
 </project>
