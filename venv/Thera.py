@@ -90,7 +90,7 @@ class Bot:
             "Nobody has ever loved you or ever will.",
             "Your grades are lower than your IQ.",
             "I bet you’re antivax.",
-            "You listen to justin Beiber.",
+            "You listen to Justin Beiber.",
             "I enjoy seeing you, it raises my own self esteem because of how much of a bad person you are.",
             "I think you just heightened my standards.",
             "I bet you cheated and still failed.",
@@ -101,7 +101,9 @@ class Bot:
         self.jokes = [
             "I would tell you a joke about time travel, but you didn't like it",
             "I hate russian dolls. They're so full of themselves",
-            "You know what's remarkable? Whiteboards."
+            "You know what's remarkable? Whiteboards.",
+            "I love pressing F5. It's so refreshing.",
+            "LabView being useful"
                       ]
         self.questions = [
             "What positive changes would you like to see happen in your life?",
@@ -127,7 +129,7 @@ class Bot:
             print("You are now in theraPY mode. (1 at any time to switch to theraCRY mode, Q to quit)")
         elif inputText == "1":
             mode = "cry"
-            print("You are now in theraCRY mode. (0 at any time to switch to theraPY mode, Q to quit")
+            print("You are now in theraCRY mode. (0 at any time to switch to theraPY mode, Q to quit)")
 
 # prints out each response the bot returns, waiting 1 second between each response to give the bot a lifelike quality.
 # the bot waits longer when the response is "in" or "out" for when the user is angry and needs to take a deep breath
