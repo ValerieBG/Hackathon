@@ -1,9 +1,15 @@
 from flask import Flask, render_template, request
 
+"""
+Our initial idea was to have the therapyst run on a website.
+After experimenting with flask ( and some borrowed code ), we were able to create this basic website.
+However, with the time constraint we were unable to integrate our terminal based bot with our website in time.
+In the future, we hope to host our bot on a website for easy access.
+"""
+
 app = Flask(__name__)
 
-text = ""
-text = "hello i am your therapyst how are u feeling today?"
+text = "Hello! I am your therapyst, how are u feeling today?"
 
 @app.route("/")
 def home():
