@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3898ce-677a-4e84-8f57-8670ef6398ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Thera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/MessingWithToneThing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/TestingPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/BasicWebsite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Thera.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Thera.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587161657644</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="text based chatbot works with watson tones&#10;still need to add better responses">
+      <created>1587254627196</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587254627197</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -261,6 +265,7 @@
     <MESSAGE value="(very) basic website" />
     <MESSAGE value="sample tone analyzer code works + added very basic bot" />
     <MESSAGE value="copied html for chatbot formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="copied html for chatbot formatting" />
+    <MESSAGE value="text based chatbot works with watson tones&#10;still need to add better responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="text based chatbot works with watson tones&#10;still need to add better responses" />
   </component>
 </project>

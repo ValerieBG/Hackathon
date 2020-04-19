@@ -9,48 +9,41 @@ mode = ""
 name = ""
 
 
-def setUpToneAnalyzer():
-    authenticator = IAMAuthenticator('5H5rGMsQV9k61CQreRRATfsZ45UjJUVtE-V-PsThD8z2')
-    global tone_analyzer
-    tone_analyzer = ToneAnalyzerV3(
-        version='2017-09-21',
-        authenticator=authenticator
-    )
-    tone_analyzer.set_service_url(
+class ToneAnalyzer():
+
+    def __init__(self):
+        global tone_analyzer
+        global authenticator
+        authenticator = IAMAuthenticator('5H5rGMsQV9k61CQreRRATfsZ45UjJUVtE-V-PsThD8z2')
+        tone_analyzer = ToneAnalyzerV3(
+            version='2017-09-21',
+            authenticator=authenticator
+        )
+        tone_analyzer.set_service_url(
         'https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/243e1e66-4f3a-43fc-a10e-37666cca200a')
 
 
-def getTone(inputText):
-    global tone_analysis
-    global tone_analyzer
-    tone_analysis = tone_analyzer.tone(
-        {'text': inputText},
-        content_type='application/json'
-    ).get_result()
+    def getTone(self, inputText):
+        global tone_analysis
+        global tone_analyzer
+        tone_analysis = tone_analyzer.tone(
+            {'text': inputText},
+            content_type='application/json'
+        ).get_result()
+
+    def getStrongestTone(self,inputText):
+        global tone_analysis
+        self.getTone(inputText)
+        strongestToneScore = 0
+        strongestTone = ""
+        for tone in tone_analysis.get('document_tone').get('tones'):
+            if tone.get('score') > strongestToneScore:
+                strongestToneScore = tone.get('score')
+                strongestTone = tone.get('tone_id')
+        return strongestToneScore, strongestTone
 
 
-def setMode(inputText):
-    global mode
-    if inputText == "0":
-        mode = "py"
-        print("you are now in therapy mode. rant away!")
-    elif inputText == "1":
-        mode = "cry"
-        print("you are now in theracry mode. i have no mercy.")
-
-
-def getStrongestTone(inputText):
-    global tone_analysis
-    getTone(inputText)
-    strongestToneScore = 0
-    strongestTone = ""
-    for tone in tone_analysis.get('document_tone').get('tones'):
-        if tone.get('score') > strongestToneScore:
-            strongestToneScore = tone.get('score')
-            strongestTone = tone.get('tone_id')
-    return strongestToneScore, strongestTone
-
-class Bot():
+class Bot:
 
     insults = []
     jokes = []
@@ -58,7 +51,7 @@ class Bot():
 
     def __init__(self):
         self.insults = ["you suck", "you're an idiot", "i hate you", "uhh did i ask?", "no one cares about you",
-                   "you're closer to your death than you've ever been :)", name + " is such an ugly name",
+                        "you're closer to your death than you've ever been :)", name + " is such an ugly name",
                         "why are you wasting time talking to a bot", "sherry says hi!",
                         "i would love to insult you, but i'm afraid i can't do as well as nature did",
                         "wow. it must be difficult exhausting your entire vocabulary in one sentence.",
@@ -68,10 +61,27 @@ class Bot():
                       "You know what's remarkable? Whiteboards."
                       ]
 
+    def setMode(self, inputText):
+        global mode
+        if inputText == "0":
+            mode = "py"
+            print("you are now in therapy mode. rant away!")
+        elif inputText == "1":
+            mode = "cry"
+            print("you are now in theracry mode. i have no mercy.")
+
+    def printResponses(self, response):
+        for sentence in response:
+            print(sentence)
+            if sentence == "in" or sentence == "out":
+                time.sleep(2)
+            else:
+                time.sleep(1)
+
     def getNiceBotResponse(self, inputText):
         response = []
-        strongestToneScore = getStrongestTone(inputText)[0]
-        strongestTone = getStrongestTone(inputText)[1]
+        strongestToneScore = toneAnalyzer.getStrongestTone(inputText)[0]
+        strongestTone = toneAnalyzer.getStrongestTone(inputText)[1]
         if strongestToneScore > 0.95:
             response.append("I understand you're feeling a lot of emotion right now and that's okay.")
         if strongestTone == "anger":
@@ -113,7 +123,7 @@ class Bot():
 
     def getMeanBotResponse(self, inputText):
         response = []
-        strongestTone = getStrongestTone(inputText)[1]
+        strongestTone = toneAnalyzer.getStrongestTone(inputText)[1]
         if "I" in inputText:
             response.append("stop talking about yourself, did I ask?")
         if strongestTone == "joy":
@@ -123,6 +133,7 @@ class Bot():
         elif strongestTone == "tentative":
             response.append("bruh could you be any more specific?")
         response.append(random.choice(self.insults))
+        response.append("please press Q and leave soon")
         return response
 
 
@@ -133,11 +144,11 @@ def intro():
     name = input()
     print("Hi ", name, "! What can I do for you today? (0 for theraPY, 1 for theraCRY)")
     text = input()
-    setMode(text)
+    myBot.setMode(text)
     while mode == "":
         print("That was not a valid mode. Please try again.")
         text = input()
-        setMode(text)
+        myBot.setMode(text)
     if mode == "py":
         print("I'm ready to help! How are you feeling today? (1 at any time to switch to theraCRY mode, Q to quit)")
     elif mode == "cry":
@@ -146,17 +157,8 @@ def intro():
     text = input()
 
 
-def printResponses(response):
-    for sentence in response:
-        print(sentence)
-        if sentence == "in" or sentence == "out":
-            time.sleep(2)
-        else:
-            time.sleep(1)
-
 def conversation():
     global text
-    myBot = Bot()
     while text != "Q":
         if mode == "cry":
             response = myBot.getMeanBotResponse(text)
@@ -164,14 +166,18 @@ def conversation():
             response = myBot.getNiceBotResponse(text)
         else:
             response = ["this shouldn't happen"]
-        printResponses(response)
+        myBot.printResponses(response)
         text = input()
-        setMode(text)
+        myBot.setMode(text)
     print("hope you enjoyed your session!")
 
 
 def main():
-    setUpToneAnalyzer()
+    global myBot
+    global toneAnalyzer
+    myBot = Bot()
+    toneAnalyzer = ToneAnalyzer()
+
     intro()
     conversation()
 
