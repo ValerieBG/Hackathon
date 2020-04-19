@@ -206,7 +206,7 @@ class Bot:
     def getMeanBotResponse(self, inputText):
         response = []
         strongestTone = toneAnalyzer.getStrongestTone(inputText)[1]
-        if "I" in inputText:
+        if "I" or "my" in inputText:
             response.append("stop talking about yourself, did i ask?")
         if strongestTone == "joy":
             response.append("bruh why are u so happy? let's change that.")
