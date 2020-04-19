@@ -68,7 +68,6 @@ class Bot:
     jokes = []
     questions = []
     therapyResponses = []
-    genericQuestions = []
     x = False
     # the negative emotion counter is used to keep track of when the user is having too many negative emotions.
     negEmotionCounter = 0
@@ -119,14 +118,6 @@ class Bot:
             "List the factors that have contributed to your feelings",
             "What sort of things would it take to make you happier or more at peace?"
         ]
-        self.genericQuestions = [
-            "How's you're day going?",
-            "What's your favorite song?",
-            "How are you feeling?",
-            "What's your favorite childhood memory?",
-            "Rate yourself out of ten.",
-            "What's your best trait?"
-        ]
 
     # changes mode to theraPY (nice bot) or theraCRY (insult bot) based on user input and alerts user
     def setMode(self, inputText):
@@ -156,6 +147,7 @@ class Bot:
 
         # the tone score is based on how strongly an emotion is felt, and the therapyst let's the user know it's okay
         # to feel a lot of emotion. This response gets annoying after a while, so the therapist only says it once.
+        randNum = random.randint(0, 4)
         if strongestToneScore > 0.95 and (not self.x):
             response.append("I understand you're feeling a lot of emotion right now and that's okay.")
             self.x = True
@@ -205,7 +197,7 @@ class Bot:
         if (strongestTone == "fear" or "sadness" or "anger") and strongestToneScore > .8:
             response.append(random.choice(self.therapyResponses))
         else:
-            randNum = random.randint(1, 5)
+            randNum = random.randint(0, 5)
             if randNum >= 4:
                 response.append(random.choice(self.questions))
         return response
@@ -223,9 +215,6 @@ class Bot:
         elif strongestTone == "tentative":
             response.append("bruh could you be any more specific?")
         response.append(random.choice(self.insults))
-        randNum = random.randint(1, 5)
-        if randNum >= 3:
-            response.append(random.choice(self.genericQuestions))
         return response
 
 
