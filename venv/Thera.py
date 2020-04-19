@@ -257,7 +257,8 @@ def conversation():
     print("hope you enjoyed your session!")
 
 
-# Here is the code that actually runs. First, our tone analyzer and bot objects are instantiated. Then, the intro and conversation happen.
+# Here is the code that actually runs. First, our tone analyzer and bot objects are instantiated.
+# Then, the intro and conversation happen.
 def main():
     global myBot
     global toneAnalyzer
