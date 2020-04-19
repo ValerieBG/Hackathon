@@ -23,10 +23,10 @@ mode = ""
 name = ""
 
 
-# Tone Analyzer class analyzes the user's tone using IBM Watson.
+# Tone Analyzer class created (analyzes the user's tone using IBM Watson Tone Analyzer)
 class ToneAnalyzer:
 
-    # Created a cloud account to access an API key and service url to use the package
+    # references cloud account to access an API key and service url to use the package
     def __init__(self):
         global tone_analyzer
         global authenticator
@@ -38,7 +38,7 @@ class ToneAnalyzer:
         tone_analyzer.set_service_url(
         'https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/243e1e66-4f3a-43fc-a10e-37666cca200a')
 
-    # creates a dictionary of tones in a text and their strengths
+    # creates a dictionary of tones and their intensity from a user input
     def getTone(self, inputText):
         global tone_analysis
         global tone_analyzer
@@ -145,8 +145,8 @@ class Bot:
         strongestToneScore = toneAnalyzer.getStrongestTone(inputText)[0]
         strongestTone = toneAnalyzer.getStrongestTone(inputText)[1]
 
-        # the tone score is based on how strongly an emotion is felt, and the therapyst let's the user know it's okay
-        # to feel a lot of emotion. This response gets annoying after a while, so the therapist only says it once.
+        # the tone score is based on how strongly an emotion is felt, and the therapyst lets the user know it's okay to feel a lot of emotion
+        # This response gets annoying after a while, so the therapist only says it once.
         randNum = random.randint(0, 4)
         if strongestToneScore > 0.95 and (not self.x):
             response.append("I understand you're feeling a lot of emotion right now and that's okay.")
@@ -169,7 +169,7 @@ class Bot:
             self.negEmotionCounter = self.negEmotionCounter + 1
             response.append("I'm sorry to hear that. What happened?")
 
-        # We tell the user a joke if they're feeling sad half of the time.
+        # We tell the user a joke if they're feeling sad over half of the time.
             randNum = random.randint(1, 4)
             if randNum >= 3:
                 response.append("Here's a joke to cheer you up!")
@@ -189,11 +189,11 @@ class Bot:
 
         # when the user is experience too many negative emotions, the bot is willing to provide resources.
         if self.negEmotionCounter > 10:
-            response.append("you sound like you're going through some rough stuff")
-            response.append("i'm just a bot, so if you ever need real help call the suicide prevention hotline:")
+            response.append("you sound like you're going through some rough stuff.")
+            response.append("i'm just a bot, so if you ever need more help, please call the suicide prevention hotline:")
             response.append("1-800-273-8255")
 
-        # when the user is experience strong negative emotions, ask questions to understand the issue
+        # when the user is experiencing strong negative emotions, therapy asks questions to understand the issue
         if (strongestTone == "fear" or "sadness" or "anger") and strongestToneScore > .8:
             response.append(random.choice(self.therapyResponses))
         else:
@@ -257,8 +257,7 @@ def conversation():
     print("hope you enjoyed your session!")
 
 
-# Here is the code that actually runs. First, our tone analyzer and bot objects are instantiated. Then, the intro and
-# conversation happen.
+# Here is the code that actually runs. First, our tone analyzer and bot objects are instantiated. Then, the intro and conversation happen.
 def main():
     global myBot
     global toneAnalyzer
