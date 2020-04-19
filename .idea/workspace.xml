@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3898ce-677a-4e84-8f57-8670ef6398ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Thera.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Thera.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -294,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587318414448</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="small changes">
+      <created>1587326693166</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1587326693331</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -335,6 +341,7 @@
     <MESSAGE value="deleted test files" />
     <MESSAGE value="minor bugs + formatting" />
     <MESSAGE value="added questions to insult bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="added questions to insult bot" />
+    <MESSAGE value="small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
   </component>
 </project>

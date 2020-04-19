@@ -68,6 +68,7 @@ class Bot:
     jokes = []
     questions = []
     therapyResponses = []
+    generalQuestions = []
     x = False
     # the negative emotion counter is used to keep track of when the user is having too many negative emotions.
     negEmotionCounter = 0
@@ -119,6 +120,13 @@ class Bot:
             "What is the severity of your situation?",
             "List the factors that have contributed to your feelings",
             "What sort of things would it take to make you happier or more at peace?"
+        ]
+        self.generalQuestions = [
+            "How is you're day going?",
+            "What are your goals right now?",
+            "Describe your perfect day.",
+            "What's your favorite show?",
+            "What's your best quality?"
         ]
 
     # changes mode to theraPY (nice bot) or theraCRY (insult bot) based on user input and alerts user
@@ -217,6 +225,9 @@ class Bot:
         elif strongestTone == "tentative":
             response.append("bruh could you be any more specific?")
         response.append(random.choice(self.insults))
+        randNum = random.randint(1, 5)
+        if randNum >= 3:
+            response.append(random.choice(self.generalQuestions))
         return response
 
 
