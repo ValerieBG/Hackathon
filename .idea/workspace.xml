@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d3898ce-677a-4e84-8f57-8670ef6398ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Thera.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Thera.py" afterDir="false" />
-    </list>
+    <list default="true" id="8d3898ce-677a-4e84-8f57-8670ef6398ca" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587263603694</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added questions to insult bot">
+      <created>1587318162475</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587318162517</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -320,6 +324,7 @@
     <MESSAGE value="Added comments and new responses." />
     <MESSAGE value="deleted test files" />
     <MESSAGE value="minor bugs + formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor bugs + formatting" />
+    <MESSAGE value="added questions to insult bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="added questions to insult bot" />
   </component>
 </project>
